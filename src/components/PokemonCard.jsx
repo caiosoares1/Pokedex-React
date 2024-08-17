@@ -21,7 +21,7 @@ export default function PokemonCard({ pokemon = pokemons }) {
                     <h1 class="pokemon-name">{pokemon.name}</h1>
                     <div class="pokemon-types">
                         <span className={`pokemon-type background-${pokemon.type[0]}`} style={{backgroundColor: pokemon.type[0]}}>{pokemon.type[0]}</span>
-                        {pokemon.type[1] ? <span class="pokemon-type background-poison">{pokemon.type[1]}</span> : ''}
+                        {pokemon.type[1] ? <span className={`pokemon-type background-${pokemon.type[1]}`}>{pokemon.type[1]}</span> : ''}
                         
                     </div>
                 </section>
