@@ -8,58 +8,58 @@ export default function PokemonCard({ pokemon = pokemons }) {
         <>
         
             <div
-                class="pokemon"
-                data-name="Bulbasaur"
-                data-type="grass,poison"
-                tabindex="1"
+                className="pokemon"
+                dataname="Bulbasaur"
+                dataype="grass,poison"
+                tabIndex="1"
             >
-                <figure class="pokemon-figure">
+                <figure className="pokemon-figure">
                     <img src={img} alt={pokemon.name} />
                 </figure>
-                <section class="pokemon-description">
-                    <span class="pokemon-id">{pokemon.id}</span>
-                    <h1 class="pokemon-name">{pokemon.name}</h1>
-                    <div class="pokemon-types">
+                <section className="pokemon-description">
+                    <span className="pokemon-id">#{pokemon.id}</span>
+                    <h1 className="pokemon-name">{pokemon.name}</h1>
+                    <div className="pokemon-types">
                         <span className={`pokemon-type background-${pokemon.type[0]}`} style={{backgroundColor: pokemon.type[0]}}>{pokemon.type[0]}</span>
                         {pokemon.type[1] ? <span className={`pokemon-type background-${pokemon.type[1]}`}>{pokemon.type[1]}</span> : ''}
                         
                     </div>
                 </section>
-                <section class="pokemon-stats">
-                    <div class="stat-row">
+                <section className="pokemon-stats">
+                    <div className="stat-row">
                         <div>hp</div>
-                        <div class="stat-bar">
-                            <div class="stat-bar-bg" style={{width: '18%'}}>45</div>
+                        <div className="stat-bar">
+                            <div className="stat-bar-bg" style={{width: `${pokemon.stats.hp}%`, maxWidth:'100%'}}>{pokemon.stats.hp}</div>
                         </div>
                     </div>
-                    <div class="stat-row">
+                    <div className="stat-row">
                         <div>attack</div>
-                        <div class="stat-bar">
-                            <div class="stat-bar-bg" style={{width: '19.'}}>49</div>
+                        <div className="stat-bar">
+                            <div className="stat-bar-bg" style={{width: `${pokemon.stats.attack}%`, maxWidth:'100%'}}>{pokemon.stats.attack}</div>
                         </div>
                     </div>
-                    <div class="stat-row">
+                    <div className="stat-row">
                         <div>defense</div>
-                        <div class="stat-bar">
-                            <div class="stat-bar-bg" style={{width: '19.'}}>49</div>
+                        <div className="stat-bar">
+                            <div className="stat-bar-bg" style={{width: `${pokemon.stats.defense}%`, maxWidth:'100%'}}>{pokemon.stats.defense}</div>
                         </div>
                     </div>
-                    <div class="stat-row">
+                    <div className="stat-row">
                         <div>sp-atk</div>
-                        <div class="stat-bar">
-                            <div class="stat-bar-bg" style={{width: '26%'}}>65</div>
+                        <div className="stat-bar">
+                            <div className="stat-bar-bg" style={{width: `${pokemon.stats.spatk}%`, maxWidth:'100%'}}>{pokemon.stats.spatk}</div>
                         </div>
                     </div>
-                    <div class="stat-row">
+                    <div className="stat-row">
                         <div>sp-def</div>
-                        <div class="stat-bar">
-                            <div class="stat-bar-bg" style={{width: '26%'}}>65</div>
+                        <div className="stat-bar">
+                            <div className="stat-bar-bg" style={{width: `${pokemon.stats.spdef}%`, maxWidth:'100%'}}>{pokemon.stats.spdef}</div>
                         </div>
                     </div>
-                    <div class="stat-row">
+                    <div className="stat-row">
                         <div>speed</div>
-                        <div class="stat-bar">
-                            <div class="stat-bar-bg" style={{width: '18%'}}>45</div>
+                        <div className="stat-bar">
+                            <div className="stat-bar-bg" style={{width: `${pokemon.stats.speed}%`, maxWidth:'100%'}}>{pokemon.stats.speed}</div>
                         </div>
                     </div>
                 </section>
