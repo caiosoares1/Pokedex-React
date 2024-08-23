@@ -3,7 +3,7 @@ import pokemons from '../data/pokedex';
 
 
 export default function PokemonCard({ pokemon = pokemons }) {
-    const img = '/img/'+ pokemon.name + '.png';
+    const img = '/img/'+ pokemon.name.toLowerCase() + '.png';
     return (
         <>
         
