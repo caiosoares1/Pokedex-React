@@ -17,7 +17,7 @@ export default function PokemonCard({ pokemon = pokemons }) {
                     <img src={img} alt={pokemon.name} />
                 </figure>
                 <section className="pokemon-description">
-                    <span className="pokemon-id">#{pokemon.id}</span>
+                    <span className="pokemon-id">#{pokemon.id.toString().padStart(3, '0')}</span>
                     <h1 className="pokemon-name">{pokemon.name}</h1>
                     <div className="pokemon-types">
                         <span className={`pokemon-type background-${pokemon.type[0]}`} style={{backgroundColor: pokemon.type[0]}}>{pokemon.type[0]}</span>
